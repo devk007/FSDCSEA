@@ -1,22 +1,24 @@
 import React from "react";
-import './student.css' 
-const Student = () => {
-  return (
-    <div className="icard">
-      <table border={2}>
-        <tr>
-          <th>Name</th>
-          <th>Roll NO.</th>
-          <th>Branch</th>
-        </tr>
-        <tr>
-          <td>Dev</td>
-          <td>53</td>
-          <td>CSE</td>
-        </tr>
-      </table>
-    </div>
-  );
-};
+
+function Student({data}) {
+    return (
+        <div className="main">
+
+            <div className="icard">
+
+                <img src={data.image} alt="image" />
+                <h1>Student Details</h1>
+                <p>Name: {data.name}</p>
+                <p>DOB: {data.dob}</p>
+                <p>Roll No:{data.roll_no}</p>
+                <p>Course: {data.course}</p>
+
+            </div>
+        </div>
+    );
+}
+
+
+
 
 export default Student;
